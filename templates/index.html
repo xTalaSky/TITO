@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/styles.css">
-    <script src="../static/app.js" defer></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
     <title>TITO</title>
 </head>
 <body>
     <nav class="navbar">
         <div class="logo">
             <a href="index.html">
-                <img src="imag/logo gris.jpg" alt="logo" width="150px" height="100px">
+                <img src="{{ url_for('static', filename='imag/logo gris.jpg') }}" alt="logo" width="150px" height="100px">
             </a>
         </div>
         <div class="search-bar">
@@ -19,11 +19,8 @@
         </div>
     </nav>
 
-    <!-- Ancla a la parte superior -->
     <a id="top"></a>
 
-    <!-- botones -->
-     
     <div class="botones">
         <div class="cuadro">
             <div class="dropdown">
@@ -47,17 +44,17 @@
                 z-index: 1;
                 border-radius: 5px;
             }
-        
+
             .dropdown-content li {
                 padding: 8px 16px;
             }
-        
+
             .dropdown-content li a {
                 text-decoration: none;
                 color: black;
                 display: block;
             }
-        
+
             .dropdown-content li:hover {
                 background-color: #ddd;
             }
@@ -67,23 +64,19 @@
             <a href="mas_populares.html">Más populares</a>
         </div>
     </div>
-
 </body>
 
-<!--carusel-->
-
 <swiper-container class="mySwiper" init="false">
-    <swiper-slide><img src="imag/Banner-1.png" alt=""></swiper-slide>
-    <swiper-slide><img src="imag/Banner-1.png" alt=""></swiper-slide>
-    <swiper-slide><img src="imag/Banner-1.png" alt=""></swiper-slide>
-    <swiper-slide><img src="imag/Banner-1.png" alt=""></swiper-slide>
-  </swiper-container>
+    <swiper-slide><img src="{{ url_for('static', filename='imag/Banner-1.png') }}" alt=""></swiper-slide>
+    <swiper-slide><img src="{{ url_for('static', filename='imag/Banner-1.png') }}" alt=""></swiper-slide>
+    <swiper-slide><img src="{{ url_for('static', filename='imag/Banner-1.png') }}" alt=""></swiper-slide>
+    <swiper-slide><img src="{{ url_for('static', filename='imag/Banner-1.png') }}" alt=""></swiper-slide>
+</swiper-container>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
 <script>
     const swiperEl = document.querySelector('swiper-container')
-
     const params = {
       injectStyles: [`
       .swiper-pagination-bullet {
@@ -96,7 +89,6 @@
         opacity: 1;
         background: rgba(0, 0, 0, 0.2);
       }
-
       .swiper-pagination-bullet-active {
         color: #fff;
         background: #007aff;
@@ -109,142 +101,77 @@
         },
       },
     }
-
     Object.assign(swiperEl, params)
-
     swiperEl.initialize();
- 
-  </script>
+</script>
 
-
-<!--Contenedor para los tenis-->
-
-    <div class="contenedor">
-        <div class="item">
-            <img src="imag/teni1.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>Jordan 4 Retro Thunder</h3> <p>$7,720</p></div>
-        </div>
-        <div class="item">
-            <img src="imag/teni2.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>Jordan 11 Retro DMP Gratitude </h3> <p>$6,199</p></div>
-        </div>
-        <div class="item">
-            <img src="imag/teni3.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>Jordan 11 Retro Legend Azul</h3> <p>$5,288</p></div>
-        </div>
-        <div class="item">
-            <img src="imag/teni4.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>Jordan 12 Retro Barons</h3>  <p>$6,807</p></div>
-        </div>
-        <div class="item">
-            <img src="imag/teni5.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>Adidas Samba OG Preloved Rojo Leopard</h3> <p>$3,626</p></div>
-        </div>
-        <div class="item">
-            <img src="imag/teni6.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>Adidas Samba OG en blanco nube y negro</h3> <p>$1,823</p></div>
-        </div>
-        <div class="item">
-            <img src="imag/teni7.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>Adidas Campus 00s en gris y blanco</h3>  <p>$1,681</p></div>
-        </div>
-        <div class="item">
-            <img src="imag/teni8.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>Adidas Yeezy Boost 350 V2 Beluga reflectante</h3> <p>$4,335</p></div>
-        </div>
+<div class="contenedor">
+    <div class="item">
+        <img src="{{ url_for('static', filename='imag/teni1.jpg') }}" alt="tenis" width="230px" height="150px">
+        <div class="Thunder"><h3></h3><p></p></div>
     </div>
-    
-    <!--control de trasparencia de un elemento-->
-    <h1 style="opacity: 0;">tito</h1>
-
-<!--Contenedor para los tenis 2-->
-
-    <div class="contenedor">
-        <div class="item">
-            <img src="imag/teni9.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>Juego Jordan 12 Retro Flu</h3> <p>$7,820</p></div>
-        </div>
-        <div class="item">
-            <img src="imag/teni10.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>Nike Air Foamposite One Galaxy</h3> <p>$7,010</p></div>
-        </div>
-        <div class="item">
-            <img src="imag/teni11.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>Adidas Yeezy Boost 350 V2 Core en negro y rojo</h3> <p>$5,068</p></div>
-        </div>
-        <div class="item">
-            <img src="imag/teni12.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>Jordan 4 Retro Thunder en blanco</h3> <p>$5,068</p></div>
-        </div>
-        <div class="item">
-            <img src="imag/teni13.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>Adidas Samba OG Cow Print </h3> <p>$4,964</p></div>
-        </div>
-        <div class="item">
-            <img src="imag/teni14.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>JVela Jordan 4 Retro Seafoam </h3> <p>$5,288</p></div>
-        </div>
-        <div class="item">
-            <img src="imag/teni15.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>Adidas Handball Spezial Arctic Night en rosa</h3> <p>$1,884 </p></div>
-        </div>
-        <div class="item">
-            <img src="imag/teni16.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>Nike Zoom Vomero 5 Photon Dust en plateado metalizado</h3> <p>$3,079</p></div>
-        </div>
+    <div class="item">
+        <img src="{{ url_for('static', filename='imag/teni2.jpg') }}" alt="tenis" width="230px" height="150px">
+        <div class="Thunder"><h3></h3><p></p></div>
     </div>
-
-    <!--anuncio 2-->
-    
-    <div class="contenedor-banner">
-        <img src="imag/Banner-7.png" alt="" class="Banner">
-        <img src="imag/Banner-8.png" alt="" class="Banner2">
+    <div class="item">
+        <img src="{{ url_for('static', filename='imag/teni3.jpg') }}" alt="tenis" width="230px" height="150px">
+        <div class="Thunder"><h3></h3><p></p></div>
     </div>
-
-    <!--control de trasparencia de un elemento-->
-    <h1 style="opacity: 0;">tito</h1>    
-
-<!--Contenedor para los tenis 3-->
-
-    <div class="contenedor">
-        <div class="item">
-            <img src="imag/teni17.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>Nike Kobe 6 Protro Sail All-Star</h3> <p>$7,314</p></div>
-        </div>
-        <div class="item">
-            <img src="imag/teni18.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>Nike Kobe 6 Protro Challenge Red All-Star </h3> <p>$11,407</p></div>
-        </div>
-        <div class="item">
-            <img src="imag/teni19.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>Nike Shox TL Black Max Orange</h3> <p>$4,032</p></div>
-        </div>
-        <div class="item">
-            <img src="imag/teni20.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>Nike Air Force 1 Low '07 en blanco</h3> <p>$2,188</p></div>
-        </div>
-        <div class="item">
-            <img src="imag/teni21.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>Puma Speedcat OG Negro Blanco</h3> <p>$2,228</p></div>
-        </div>
-        <div class="item">
-            <img src="imag/teni22.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>Puma Suede One Piece Straw Hat Luffy</h3> <p>$1,924 </p></div>
-        </div>
-        <div class="item">
-            <img src="imag/teni23.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>Puma LaMelo Ball MB.03</h3> <p>$4,032</p></div>
-        </div>
-        <div class="item">
-            <img src="imag/teni24.jpg" alt="tenis" width="230px" height="150px">
-            <div class="Thunder"> <h3>Balón Puma Negro</h3> <p>$4,093</p></div>
-        </div>
+    <div class="item">
+        <img src="{{ url_for('static', filename='imag/teni4.jpg') }}" alt="tenis" width="230px" height="150px">
+        <div class="Thunder"><h3></h3><p></p></div>
     </div>
+    <div class="item">
+        <img src="{{ url_for('static', filename='imag/teni5.jpg') }}" alt="tenis" width="230px" height="150px">
+        <div class="Thunder"><h3></h3><p></p></div>
+    </div>
+    <div class="item">
+        <img src="{{ url_for('static', filename='imag/teni6.jpg') }}" alt="tenis" width="230px" height="150px">
+        <div class="Thunder"><h3></h3><p></p></div>
+    </div>
+    <div class="item">
+        <img src="{{ url_for('static', filename='imag/teni7.jpg') }}" alt="tenis" width="230px" height="150px">
+        <div class="Thunder"><h3></h3><p></p></div>
+    </div>
+    <div class="item">
+        <img src="{{ url_for('static', filename='imag/teni8.jpg') }}" alt="tenis" width="230px" height="150px">
+        <div class="Thunder"><h3></h3><p></p></div>
+    </div>
+</div>
 
-        <!--control de trasparencia de un elemento-->
-        <h1 style="opacity: 0;">tito</h1>
+<h1 style="opacity: 0;">tito</h1>
 
-<!--contantanos -->
+<div class="contenedor">
+    <div class="item"><img src="{{ url_for('static', filename='imag/teni9.jpg') }}" alt="tenis" width="230px" height="150px"><div class="Thunder"><h3></h3><p></p></div></div>
+    <div class="item"><img src="{{ url_for('static', filename='imag/teni10.jpg') }}" alt="tenis" width="230px" height="150px"><div class="Thunder"><h3></h3><p></p></div></div>
+    <div class="item"><img src="{{ url_for('static', filename='imag/teni11.jpg') }}" alt="tenis" width="230px" height="150px"><div class="Thunder"><h3></h3><p></p></div></div>
+    <div class="item"><img src="{{ url_for('static', filename='imag/teni12.jpg') }}" alt="tenis" width="230px" height="150px"><div class="Thunder"><h3></h3><p></p></div></div>
+    <div class="item"><img src="{{ url_for('static', filename='imag/teni13.jpg') }}" alt="tenis" width="230px" height="150px"><div class="Thunder"><h3></h3><p></p></div></div>
+    <div class="item"><img src="{{ url_for('static', filename='imag/teni14.jpg') }}" alt="tenis" width="230px" height="150px"><div class="Thunder"><h3></h3><p></p></div></div>
+    <div class="item"><img src="{{ url_for('static', filename='imag/teni15.jpg') }}" alt="tenis" width="230px" height="150px"><div class="Thunder"><h3></h3><p></p></div></div>
+    <div class="item"><img src="{{ url_for('static', filename='imag/teni16.jpg') }}" alt="tenis" width="230px" height="150px"><div class="Thunder"><h3></h3><p></p></div></div>
+</div>
+
+<div class="contenedor-banner">
+    <img src="{{ url_for('static', filename='imag/Banner-7.png') }}" alt="" class="Banner">
+    <img src="{{ url_for('static', filename='imag/Banner-8.png') }}" alt="" class="Banner2">
+</div>
+
+<h1 style="opacity: 0;">tito</h1>
+
+<div class="contenedor">
+    <div class="item"><img src="{{ url_for('static', filename='imag/teni17.jpg') }}" alt="tenis" width="230px" height="150px"><div class="Thunder"><h3></h3><p></p></div></div>
+    <div class="item"><img src="{{ url_for('static', filename='imag/teni18.jpg') }}" alt="tenis" width="230px" height="150px"><div class="Thunder"><h3></h3><p></p></div></div>
+    <div class="item"><img src="{{ url_for('static', filename='imag/teni19.jpg') }}" alt="tenis" width="230px" height="150px"><div class="Thunder"><h3></h3><p></p></div></div>
+    <div class="item"><img src="{{ url_for('static', filename='imag/teni20.jpg') }}" alt="tenis" width="230px" height="150px"><div class="Thunder"><h3></h3><p></p></div></div>
+    <div class="item"><img src="{{ url_for('static', filename='imag/teni21.jpg') }}" alt="tenis" width="230px" height="150px"><div class="Thunder"><h3></h3><p></p></div></div>
+    <div class="item"><img src="{{ url_for('static', filename='imag/teni22.jpg') }}" alt="tenis" width="230px" height="150px"><div class="Thunder"><h3></h3><p></p></div></div>
+    <div class="item"><img src="{{ url_for('static', filename='imag/teni23.jpg') }}" alt="tenis" width="230px" height="150px"><div class="Thunder"><h3></h3><p></p></div></div>
+    <div class="item"><img src="{{ url_for('static', filename='imag/teni24.jpg') }}" alt="tenis" width="230px" height="150px"><div class="Thunder"><h3></h3><p></p></div></div>
+</div>
+
+<h1 style="opacity: 0;">tito</h1>
 
 <nav class="pedidos-button">
     <a href="como-podemos-ayudarte.html">
@@ -252,21 +179,19 @@
     </a>
 </nav>
 
-<!--nosotros-->
-
 <section id="acerca" class="about-section">
     <div class="left">
         <p>Redes sociales</p>
         <div class="social-images">
-            <img src="imag/logofondoblanco.jpg" alt="logo" width="150px" height="100px">
+            <img src="{{ url_for('static', filename='imag/logofondoblanco.jpg') }}" alt="logo" width="150px" height="100px">
             <a href="https://www.facebook.com/share/1882fctY1v/" target="_blank">
-                <img src="imag/facebook.jpg" alt="Facebook" width="55px" height="40px">
+                <img src="{{ url_for('static', filename='imag/facebook.jpg') }}" alt="Facebook" width="55px" height="40px">
             </a>
             <a href="https://www.instagram.com/tala_wlr/" target="_blank">
-                <img src="imag/instagram.jpg" alt="Instagram" width="55px" height="40px">
+                <img src="{{ url_for('static', filename='imag/instagram.jpg') }}" alt="Instagram" width="55px" height="40px">
             </a>
             <a href="https://www.tiktok.com/@manuelrdzcedilo?_t=ZM-8vDa5N42dr4&_r=1" target="_blank">
-                <img src="imag/tiktok.jpg" alt="TikTok" width="55px" height="40px">
+                <img src="{{ url_for('static', filename='imag/tiktok.jpg') }}" alt="TikTok" width="55px" height="40px">
             </a>
         </div>
     </div>
@@ -274,13 +199,11 @@
     <div class="right">
         <p>Colaboradores</p>
         <div class="images">
-            <img src="imag/tiendademuebles.jpg" alt="logo" width="150px" height="100px">
-            <img src="imag/kasmak.jpg" alt="logo" width="150px" height="100px">
+            <img src="{{ url_for('static', filename='imag/tiendademuebles.jpg') }}" alt="logo" width="150px" height="100px">
+            <img src="{{ url_for('static', filename='imag/kasmak.jpg') }}" alt="logo" width="150px" height="100px">
         </div>
     </div>
 </section>
-
-    </main>
 
 </body>
 </html>
