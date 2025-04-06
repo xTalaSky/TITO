@@ -31,19 +31,19 @@ def adidas():
     return render_template('adidas.html')
 
 @app.route('/como-podemos-ayudarte')
-def adidas():
+def ayudarte():
     return render_template('como-podemos-ayudarte.html')
 
 @app.route('/jordan')
-def adidas():
+def jordan():
     return render_template('jordan.html')
 
 @app.route('/mas_populares')
-def adidas():
+def populares():
     return render_template('mas_populares.html')
 
 @app.route('/pumas')
-def adidas():
+def pumas():
     return render_template('pumas.html')
 
 @app.route('/send_email', methods=['POST'])
