@@ -11,8 +11,8 @@
     
     <nav class="navbar">
         <div class="logo">
-            <a href="index.html">
-                <img src="imag/logo gris.jpg" alt="logo" width="150px" height="100px">
+            <a href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='imag/logo gris.jpg') }}" alt="logo" width="150px" height="100px">
             </a>
         </div>
         <div class="search-bar">
@@ -29,10 +29,10 @@
             <div class="dropdown">
                 <div class="dropdown-title" onclick="toggleDropdown()">Marcas</div>
                 <ul class="dropdown-content" id="dropdownContent">
-                    <li><a href="nike.html">Nike</a></li>
-                    <li><a href="adidas.html">Adidas</a></li>
-                    <li><a href="pumas.html">Pumas</a></li>
-                    <li><a href="jordan.html">Jordan</a></li>
+                    <li><a href="{{ url_for('nike') }}">Nike</a></li>
+                    <li><a href="{{ url_for('adidas') }}">Adidas</a></li>
+                    <li><a href="{{ url_for('pumas') }}">Puma</a></li>
+                    <li><a href="{{ url_for('jordan') }}">Jordan</a></li>
                 </ul>
             </div>
         </div>
@@ -64,7 +64,7 @@
         </style>
         
         <div class="cuadro mas-popular">
-            <a href="mas_populares.html">Más populares</a>
+            <a href="{{ url_for('populares') }}">Más populares</a>
         </div>
     </div>
 
@@ -75,35 +75,35 @@
     
     <div class="contenedor">
         <div class="item">
-            <img src="imag/jordan1.jpg" alt="jordan" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/jordan1.jpg') }}" alt="jordan" width="230px" height="150px">
             <div class="Thunder"> <h3>Jordan 4 Retro Thunder en blanco</h3> <p>$5,068</p></div>
         </div>
         <div class="item">
-            <img src="imag/jordan2.jpg" alt="jordan" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/jordan2.jpg') }}g" alt="jordan" width="230px" height="150px">
             <div class="Thunder"> <h3>Jordan 11 Retro DMP Gratitude</h3> <p>$6,199</p></div>
         </div>
         <div class="item">
-            <img src="imag/jordan3.jpg" alt="jordan" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/jordan3.jpg') }}" alt="jordan" width="230px" height="150px">
             <div class="Thunder"> <h3>Jordan 11 Retro Legend Azul</h3> <p>$5,288</p></div>
         </div>
         <div class="item">
-            <img src="imag/jordan4.jpg" alt="jordan" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/jordan4.jpg') }}" alt="jordan" width="230px" height="150px">
             <div class="Thunder"> <h3>Jordan 12 Retro Barons</h3> <p>$6,807</p></div>
         </div>
         <div class="item">
-            <img src="imag/jordan5.jpg" alt="jordan" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/jordan5.jpg') }}" alt="jordan" width="230px" height="150px">
             <div class="Thunder"> <h3>Jordan Jumpman Jack TR Travis Scott en marrón moca oscuro</h3> <p>$5,917</p></div>
         </div>
         <div class="item">
-            <img src="imag/jordan6.jpg" alt="jordan" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/jordan6.jpg') }}" alt="jordan" width="230px" height="150px">
             <div class="Thunder"> <h3>Jordan 12 Retro Blueberry</h3> <p>$7,299</p></div>
         </div>
         <div class="item">
-            <img src="imag/jordan7.jpg" alt="jordan" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/jordan7.jpg') }}" alt="jordan" width="230px" height="150px">
             <div class="Thunder"> <h3>Jordan 4 Retro en dorado metalizado</h3> <p>$6,140</p></div>
         </div>
         <div class="item">
-            <img src="imag/jordan8.jpg" alt="jordan" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/jordan8.jpg') }}" alt="jordan" width="230px" height="150px">
             <div class="Thunder"> <h3>Jordan 3 Retro en hormigón blanco rediseñados</h3> <p>$4,676</p></div>
         </div>
     </div>
@@ -115,37 +115,37 @@
 
     <div class="contenedor">
         <div class="item">
-            <img src="imag/jordan9.jpg" alt="jordan" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/jordan9.jpg') }}" alt="jordan" width="230px" height="150px">
             <div class="Thunder"> <h3>Jordan 12 Retro Playoffs</h3> <p>$3,253</p></div>
         </div>
         <div class="item">
-            <img src="imag/jordan10.jpg" alt="jordan" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/jordan10.jpg') }}" alt="jordan" width="230px" height="150px">
             <div class="Thunder"> <h3>Nike Air Foamposite One Galaxy</h3> <p>$7,010</p></div>
         </div>
         <div class="item">
-            <img src="imag/jordan11.jpg" alt="jordan" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/jordan11.jpg') }}" alt="jordan" width="230px" height="150px">
             <div class="Thunder"> <h3>Jordan 1 Retro Low OG SP Travis Scott Phantom en negro</h3> <p>$17,486</p></div>
         </div>
         <div class="item">
-            <img src="imag/jordan12.jpg" alt="jordan" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/jordan12.jpg') }}" alt="jordan" width="230px" height="150px">
             <div class="Thunder"> <h3>Jordan 4 Retro Thunder en blanco</h3> <p>$5,068</p></div>
         </div>
         <div class="item">
-            <img src="imag/jordan13.jpg" alt="jordan" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/jordan13.jpg') }}" alt="jordan" width="230px" height="150px">
             <div class="Thunder"> <h3>Jordan 6 Retro Olympic/h3> <p>$3,314 </p></div>
         </div>
         <div class="item">
-            <img src="imag/jordan14.jpg" alt="jordan" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/jordan14.jpg') }}" alt="jordan" width="230px" height="150px">
             <div class="Thunder"> <h3>Jordan 4 Retro A Ma Maniére en mineral violeta</h3> <p>$5,124</p></div>
         </div>
         <div class="item">
-            <img src="imag/jordan15.jpg" alt="jordan" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/jordan15.jpg') }}" alt="jordan" width="230px" height="150px">
             <div class="Thunder"> <h3>Jordan 9 Retro Verde oliva</h3> <p>$4,981</p></div>
         </div>
         <div class="item">
-            <img src="imag/jordan16.jpg" alt="jordan" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/jordan16.jpg') }}" alt="jordan" width="230px" height="150px">
             <div class="Thunder"> <h3>Jordan 11 Retro Bajo Azul Difuminado</h3> <p>$4,270</p></div>
-        </div>
+        </div>-
         </div>
 
             <!--control de trasparencia de un elemento-->
@@ -154,7 +154,7 @@
         <!--contantanos -->
 
 <nav class="pedidos-button">
-    <a href="como-podemos-ayudarte.html">
+    <a href="{{ url_for('ayudarte') }}">
         <button class="pedidos-button">Pedidos</button>
     </a>
 </nav>
@@ -165,15 +165,15 @@
     <div class="left">
         <p>Redes sociales</p>
         <div class="social-images">
-            <img src="imag/logofondoblanco.jpg" alt="logo" width="150px" height="100px">
+            <img src="{{ url_for('static', filename='imag/logofondoblanco.jpg') }}" alt="logo" width="150px" height="100px">
             <a href="https://www.facebook.com/share/1882fctY1v/" target="_blank">
-                <img src="imag/facebook.jpg" alt="Facebook" width="55px" height="40px">
+                <img src="{{ url_for('static', filename='imag/facebook.jpg') }}" alt="Facebook" width="55px" height="40px">
             </a>
             <a href="https://www.instagram.com/tala_wlr/" target="_blank">
-                <img src="imag/instagram.jpg" alt="Instagram" width="55px" height="40px">
+                <img src="{{ url_for('static', filename='imag/instagram.jpg') }}" alt="Instagram" width="55px" height="40px">
             </a>
             <a href="https://www.tiktok.com/@manuelrdzcedilo?_t=ZM-8vDa5N42dr4&_r=1" target="_blank">
-                <img src="imag/tiktok.jpg" alt="TikTok" width="55px" height="40px">
+                <img src="{{ url_for('static', filename='imag/tiktok.jpg') }}" alt="TikTok" width="55px" height="40px">
             </a>
         </div>
     </div>
@@ -181,8 +181,8 @@
     <div class="right">
         <p>Colaboradores</p>
         <div class="images">
-            <img src="imag/tiendademuebles.jpg" alt="logo" width="150px" height="100px">
-            <img src="imag/kasmak.jpg" alt="logo" width="150px" height="100px">
+            <img src="{{ url_for('static', filename='imag/tiendademuebles.jpg') }}" alt="logo" width="150px" height="100px">
+            <img src="{{ url_for('static', filename='imag/kasmak.jpg') }}" alt="logo" width="150px" height="100px">
         </div>
     </div>
 </section>

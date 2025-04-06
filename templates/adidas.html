@@ -10,8 +10,8 @@
 <body>
     <nav class="navbar">
         <div class="logo">
-            <a href="index.html">
-                <img src="imag/logo gris.jpg" alt="logo" width="150px" height="100px">
+            <a href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='imag/logo gris.jpg') }}" alt="logo" width="150px" height="100px">
             </a>
         </div>
         <div class="search-bar">
@@ -28,10 +28,10 @@
         <div class="dropdown">
             <div class="dropdown-title" onclick="toggleDropdown()">Marcas</div>
             <ul class="dropdown-content" id="dropdownContent">
-                <li><a href="nike.html">Nike</a></li>
-                <li><a href="adidas.html">Adidas</a></li>
-                <li><a href="pumas.html">Pumas</a></li>
-                <li><a href="jordan.html">Jordan</a></li>
+                <li><a href="{{ url_for('nike') }}">Nike</a></li>
+                <li><a href="{{ url_for('adidas') }}">Adidas</a></li>
+                <li><a href="{{ url_for('pumas') }}">Puma</a></li>
+                <li><a href="{{ url_for('jordan') }}">Jordan</a></li>
             </ul>
         </div>
     </div>
@@ -63,7 +63,7 @@
     </style>
     
     <div class="cuadro mas-popular">
-        <a href="mas_populares.html">Más populares</a>
+        <a href="{{ url_for('populares') }}">Más populares</a>
     </div>
 </div>
 
@@ -74,35 +74,35 @@
     
     <div class="contenedor">
         <div class="item">
-            <img src="imag/adidas1.jpg" alt="adidas" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/adidas1.jpg') }}" alt="adidas" width="230px" height="150px">
             <div class="Thunder"> <h3>Adidas Yeezy Boost 350 V2 MX en negro</h3> <p>$3,330</p></div>
         </div>
         <div class="item">
-            <img src="imag/adidas2.jpg" alt="adidas" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/adidas2.jpg') }}" alt="adidas" width="230px" height="150px">
             <div class="Thunder"> <h3>Adidas Yeezy 500 en marrón piedra</h3> <p>$3,330</p></div>
         </div>
         <div class="item">
-            <img src="imag/adidas3.jpg" alt="adidas" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/adidas3.jpg') }}" alt="adidas" width="230px" height="150px">
             <div class="Thunder"> <h3>Adidas Yeezy Boost 350 V2 en negro y rojo</h3> <p>$5,086 </p></div>
         </div>
         <div class="item">
-            <img src="imag/adidas4.jpg" alt="adidas" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/adidas4.jpg') }}" alt="adidas" width="230px" height="150px">
             <div class="Thunder"> <h3>Adidas Campus Bad Bunny en marrón intenso</h3> <p>$5,086</p></div>
         </div>
         <div class="item">
-            <img src="imag/adidas5.jpg" alt="adidas" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/adidas5.jpg') }}" alt="adidas" width="230px" height="150px">
             <div class="Thunder"> <h3>Adidas Yeezy 700 V3 en cobre descolorido</h3> <p>$2,402</p></div>
         </div>
         <div class="item">
-            <img src="imag/adidas6.jpg" alt="adidas" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/adidas6.jpg') }}" alt="adidas" width="230px" height="150px">
             <div class="Thunder"> <h3>Adidas Yeezy Boost 700 Wave Runner</h3> <p>$7,952</p></div>
         </div>
         <div class="item">
-            <img src="imag/adidas7.jpg" alt="adidas" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/adidas7.jpg') }}" alt="adidas" width="230px" height="150px">
             <div class="Thunder"> <h3>Adidas AE 1 Bajo en Hierro Afila el Hierro</h3> <p>$2,139</p></div>
         </div>
         <div class="item">
-            <img src="imag/adidas8.jpg" alt="adidas" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/adidas8.jpg') }}" alt="adidas" width="230px" height="150px">
             <div class="Thunder"> <h3>Adidas Yeezy 450 Utility en negro</h3> <p>$2,745</p></div>
         </div>
     </div>
@@ -114,35 +114,35 @@
 
     <div class="contenedor">
         <div class="item">
-            <img src="imag/adidas9.jpg" alt="adidas" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/adidas9.jpg') }}" alt="adidas" width="230px" height="150px">
             <div class="Thunder"> <h3>Adidas Yeezy Boost 700 MNVN Honey Flux</h3> <p>$1,978</p></div>
         </div>
         <div class="item">
-            <img src="imag/adidas10.jpg" alt="adidas" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/adidas10.jpg') }}" alt="adidas" width="230px" height="150px">
             <div class="Thunder"> <h3>Adidas Response CL Bad Bunny Paso Fino</h3> <p>$3,209</p></div>
         </div>
         <div class="item">
-            <img src="imag/adidas11.jpg" alt="adidas" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/adidas11.jpg') }}" alt="adidas" width="230px" height="150px">
             <div class="Thunder"> <h3>Adidas Harden Vol. 8 Rojo Lujo</h3> <p>$2,704</p></div>
         </div>
         <div class="item">
-            <img src="imag/adidas12.jpg" alt="adidas" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/adidas12.jpg') }}" alt="adidas" width="230px" height="150px">
             <div class="Thunder"> <h3>Adidas Harden Vol. 9 Cyber Metallic</h3> <p>$3,269</p></div>
         </div>
         <div class="item">
-            <img src="imag/adidas13.jpg" alt="adidas" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/adidas13.jpg') }}" alt="adidas" width="230px" height="150px">
             <div class="Thunder"> <h3>Resina Adidas Yeezy Boost 700 MNVN</h3> <p>$1,715</p></div>
         </div>
         <div class="item">
-            <img src="imag/adidas14.jpg" alt="adidas" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/adidas14.jpg') }}" alt="adidas" width="230px" height="150px">
             <div class="Thunder"> <h3>Adidas Yeezy 500 en gris piedra y marrón topo</h3> <p>$2,825</p></div>
         </div>
         <div class="item">
-            <img src="imag/adidas15.jpg" alt="adidas" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/adidas15.jpg') }}" alt="adidas" width="230px" height="150px">
             <div class="Thunder"> <h3>Adidas Yeezy Boost 700 MNVN en gris azulado</h3> <p>$2,765</p></div>
         </div>
         <div class="item">
-            <img src="imag/adidas16.jpg" alt="adidas" width="230px" height="150px">
+            <img src="{{ url_for('static', filename='imag/adidas16.jpg') }}" alt="adidas" width="230px" height="150px">
             <div class="Thunder"> <h3>Adidas Harden Vol. 8 Después de Horas</h3> <p>$2,926</p></div>
         </div>
         </div>
@@ -153,7 +153,7 @@
         <!--contantanos -->
 
 <nav class="pedidos-button">
-    <a href="como-podemos-ayudarte.html">
+    <a href="{{ url_for('ayudarte') }}">
         <button class="pedidos-button">Pedidos</button>
     </a>
 </nav>
@@ -164,15 +164,15 @@
     <div class="left">
         <p>Redes sociales</p>
         <div class="social-images">
-            <img src="imag/logofondoblanco.jpg" alt="logo" width="150px" height="100px">
+            <img src="{{ url_for('static', filename='imag/logofondoblanco.jpg') }}" alt="logo" width="150px" height="100px">
             <a href="https://www.facebook.com/share/1882fctY1v/" target="_blank">
-                <img src="imag/facebook.jpg" alt="Facebook" width="55px" height="40px">
+                <img src="{{ url_for('static', filename='imag/facebook.jpg') }}" alt="Facebook" width="55px" height="40px">
             </a>
             <a href="https://www.instagram.com/tala_wlr/" target="_blank">
-                <img src="imag/instagram.jpg" alt="Instagram" width="55px" height="40px">
+                <img src="{{ url_for('static', filename='imag/instagram.jpg') }}" alt="Instagram" width="55px" height="40px">
             </a>
             <a href="https://www.tiktok.com/@manuelrdzcedilo?_t=ZM-8vDa5N42dr4&_r=1" target="_blank">
-                <img src="imag/tiktok.jpg" alt="TikTok" width="55px" height="40px">
+                <img src="{{ url_for('static', filename='imag/tiktok.jpg') }}" alt="TikTok" width="55px" height="40px">
             </a>
         </div>
     </div>
@@ -180,8 +180,8 @@
     <div class="right">
         <p>Colaboradores</p>
         <div class="images">
-            <img src="imag/tiendademuebles.jpg" alt="logo" width="150px" height="100px">
-            <img src="imag/kasmak.jpg" alt="logo" width="150px" height="100px">
+            <img src="{{ url_for('static', filename='imag/tiendademuebles.jpg') }}" alt="logo" width="150px" height="100px">
+            <img src="{{ url_for('static', filename='imag/kasmak.jpg') }}" alt="logo" width="150px" height="100px">
         </div>
     </div>
 </section>
