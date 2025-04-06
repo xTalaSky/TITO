@@ -10,7 +10,7 @@
 <body>
     <nav class="navbar">
         <div class="logo">
-            <a href="index.html">
+            <a href="{{ url_for('index') }}">
                 <img src="{{ url_for('static', filename='imag/logo gris.jpg') }}" alt="logo" width="150px" height="100px">
             </a>
         </div>
@@ -29,10 +29,10 @@
             <div class="dropdown">
                 <div class="dropdown-title" onclick="toggleDropdown()">Marcas</div>
                 <ul class="dropdown-content" id="dropdownContent">
-                    <li><a href="nike.html">Nike</a></li>
-                    <li><a href="adidas.html">Adidas</a></li>
-                    <li><a href="pumas.html">Pumas</a></li>
-                    <li><a href="jordan.html">Jordan</a></li>
+                    <li><a href="{{ url_for('nike') }}">Nike</a></li>
+                    <li><a href="{{ url_for('adidas') }}">Adidas</a></li>
+                    <li><a href="{{ url_for('pumas') }}">Pumas</a></li>
+                    <li><a href="{{ url_for('jordan') }}">Jordan</a></li>
                 </ul>
             </div>
         </div>
@@ -64,7 +64,7 @@
         </style>
 
         <div class="cuadro mas-popular">
-            <a href="mas_populares.html">Más populares</a>
+            <a href="{{ url_for('populares') }}">Más populares</a>
         </div>
     </div>
 
@@ -247,7 +247,7 @@
 <!--contantanos -->
 
 <nav class="pedidos-button">
-    <a href="como-podemos-ayudarte.html">
+    <a href="{{ url_for('ayudarte') }}">
         <button class="pedidos-button">Pedidos</button>
     </a>
 </nav>
