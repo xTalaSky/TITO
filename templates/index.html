@@ -19,7 +19,10 @@
         </div>
     </nav>
 
+    <!-- Ancla a la parte superior -->
     <a id="top"></a>
+
+    <!-- botones -->
 
     <div class="botones">
         <div class="cuadro">
@@ -64,7 +67,10 @@
             <a href="mas_populares.html">Más populares</a>
         </div>
     </div>
+
 </body>
+
+<!--carusel-->
 
 <swiper-container class="mySwiper" init="false">
     <swiper-slide><img src="{{ url_for('static', filename='imag/Banner-1.png') }}" alt=""></swiper-slide>
@@ -77,6 +83,7 @@
 
 <script>
     const swiperEl = document.querySelector('swiper-container')
+    
     const params = {
       injectStyles: [`
       .swiper-pagination-bullet {
@@ -89,6 +96,7 @@
         opacity: 1;
         background: rgba(0, 0, 0, 0.2);
       }
+
       .swiper-pagination-bullet-active {
         color: #fff;
         background: #007aff;
@@ -101,9 +109,15 @@
         },
       },
     }
+
     Object.assign(swiperEl, params)
+
     swiperEl.initialize();
+    
 </script>
+
+
+<!--Contenedor para los tenis-->
 
 <div class="contenedor">
     <div class="item">
@@ -140,7 +154,10 @@
     </div>
 </div>
 
+<!--control de trasparencia de un elemento-->
 <h1 style="opacity: 0;">tito</h1>
+
+<!--Contenedor para los tenis 2-->
 
 <div class="contenedor">
     <div class="item">
@@ -177,72 +194,65 @@
     </div>
 </div>
 
+<!--anuncio 2-->
+
 <div class="contenedor-banner">
     <img src="{{ url_for('static', filename='imag/Banner-7.png') }}" alt="" class="Banner">
     <img src="{{ url_for('static', filename='imag/Banner-8.png') }}" alt="" class="Banner2">
 </div>
 
+<!--control de trasparencia de un elemento-->
 <h1 style="opacity: 0;">tito</h1>
+
+<!--Contenedor para los tenis 3-->
 
 <div class="contenedor">
     <div class="item">
         <img src="{{ url_for('static', filename='imag/teni17.jpg') }}" alt="tenis" width="230px" height="150px">
-        <div class="Thunder">
-            <h3>Nike Kobe 6 Protro Sail All-Star</h3><p>$7,314</p>
-        </div>
+        <div class="Thunder"><h3>Nike Kobe 6 Protro Sail All-Star</h3><p>$7,314</p></div>
     </div>
     <div class="item">
         <img src="{{ url_for('static', filename='imag/teni18.jpg') }}" alt="tenis" width="230px" height="150px">
-        <div class="Thunder">
-            <h3>Nike Kobe 6 Protro Challenge Red All-Star </h3><p>$11,407</p>
-        </div>
+        <div class="Thunder"><h3>Nike Kobe 6 Protro Challenge Red All-Star </h3><p>$11,407</p></div>
     </div>
     <div class="item">
         <img src="{{ url_for('static', filename='imag/teni19.jpg') }}" alt="tenis" width="230px" height="150px">
-        <div class="Thunder">
-            <h3>Nike Shox TL Black Max Orange</h3><p>$4,032</p>
-        </div>
+        <div class="Thunder"><h3>Nike Shox TL Black Max Orange</h3><p>$4,032</p></div>
     </div>
     <div class="item">
         <img src="{{ url_for('static', filename='imag/teni20.jpg') }}" alt="tenis" width="230px" height="150px">
-        <div class="Thunder">
-            <h3>Nike Air Force 1 Low '07 en blanco</h3><p>$2,188</p>
-        </div>
+        <div class="Thunder"><h3>Nike Air Force 1 Low '07 en blanco</h3><p>$2,188</p></div>
     </div>
     <div class="item">
         <img src="{{ url_for('static', filename='imag/teni21.jpg') }}" alt="tenis" width="230px" height="150px">
-        <div class="Thunder">
-            <h3>Puma Speedcat OG Negro Blanco</h3><p>$2,228</p>
-        </div>
+        <div class="Thunder"><h3>Puma Speedcat OG Negro Blanco</h3><p>$2,228</p></div>
     </div>
     <div class="item">
         <img src="{{ url_for('static', filename='imag/teni22.jpg') }}" alt="tenis" width="230px" height="150px">
-        <div class="Thunder">
-            <h3>Puma Suede One Piece Straw Hat Luffy</h3><p>$1,924 </p>
-        </div>
+        <div class="Thunder"><h3>Puma Suede One Piece Straw Hat Luffy</h3><p>$1,924 </p></div>
     </div>
     <div class="item">
         <img src="{{ url_for('static', filename='imag/teni23.jpg') }}" alt="tenis" width="230px" height="150px">
-        <div class="Thunder">
-            <h3>Puma LaMelo Ball MB.03</h3><p>$4,032</p>
-        </div>
+        <div class="Thunder"><h3>Puma LaMelo Ball MB.03</h3><p>$4,032</p></div>
     </div>
     <div class="item">
         <img src="{{ url_for('static', filename='imag/teni24.jpg') }}" alt="tenis" width="230px" height="150px">
-        <div class="Thunder">
-            <h3>Balón Puma Negro</h3><p>$4,093</p>
-        </div>
+        <div class="Thunder"><h3>Balón Puma Negro</h3><p>$4,093</p></div>
     </div>
 </div>
 
-
+<!--control de trasparencia de un elemento-->
 <h1 style="opacity: 0;">tito</h1>
+
+<!--contantanos -->
 
 <nav class="pedidos-button">
     <a href="como-podemos-ayudarte.html">
         <button class="pedidos-button">Pedidos</button>
     </a>
 </nav>
+
+<!--nosotros-->
 
 <section id="acerca" class="about-section">
     <div class="left">
@@ -269,6 +279,8 @@
         </div>
     </div>
 </section>
+
+
 
 </body>
 </html>
