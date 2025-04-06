@@ -22,6 +22,30 @@ mail = Mail(app)
 def index():
     return render_template('index.html')
 
+@app.route('/nike')
+def nike():
+    return render_template('nike.html')
+
+@app.route('/adidas')
+def adidas():
+    return render_template('adidas.html')
+
+@app.route('/como-podemos-ayudarte')
+def adidas():
+    return render_template('como-podemos-ayudarte.html')
+
+@app.route('/jordan')
+def adidas():
+    return render_template('jordan.html')
+
+@app.route('/mas_populares')
+def adidas():
+    return render_template('mas_populares.html')
+
+@app.route('/pumas')
+def adidas():
+    return render_template('pumas.html')
+
 @app.route('/send_email', methods=['POST'])
 def send_email():
     try:
