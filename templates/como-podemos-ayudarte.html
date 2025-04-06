@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <script src="../static/app.js" defer></script>
+    <title>TITO Como podemos ayudarte</title>
+    <style>
+        /* Center the logo in the navbar for this specific page */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="imag/logo gris.jpg" alt="logo" width="150px" height="100px">
+            </a>
+        </div>
+    </nav>
+
+    
+
+
+<section id="contacto" class="contact-section">
+    <h2>Contacto</h2>
+    <form id="contact-form" method="POST" action="/send_email">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="email" name="correo" placeholder="Correo Electrónico" required>
+        <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<!--nosotros-->
+
+<section id="acerca" class="about-section">
+    <div class="left">
+        <p>Redes sociales</p>
+        <div class="social-images">
+            <img src="imag/logofondoblanco.jpg" alt="logo" width="150px" height="100px">
+            <a href="https://www.facebook.com/share/1882fctY1v/" target="_blank">
+                <img src="imag/facebook.jpg" alt="Facebook" width="55px" height="40px">
+            </a>
+            <a href="https://www.instagram.com/tala_wlr/" target="_blank">
+                <img src="imag/instagram.jpg" alt="Instagram" width="55px" height="40px">
+            </a>
+            <a href="https://www.tiktok.com/@manuelrdzcedilo?_t=ZM-8vDa5N42dr4&_r=1" target="_blank">
+                <img src="imag/tiktok.jpg" alt="TikTok" width="55px" height="40px">
+            </a>
+        </div>
+    </div>
+
+    <div class="right">
+        <p>Colaboradores</p>
+        <div class="images">
+            <img src="imag/tiendademuebles.jpg" alt="logo" width="150px" height="100px">
+            <img src="imag/kasmak.jpg" alt="logo" width="150px" height="100px">
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
