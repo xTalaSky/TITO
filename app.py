@@ -5,7 +5,7 @@ import os
 
 load_dotenv()
 
-app = Flask("_name_")
+app = Flask(__name__)
 
 app.secret_key = os.getenv('FLASK_SECRET_KEY', '123')
 
@@ -56,7 +56,7 @@ def send_email():
         # Crear el mensaje de correo
         msg = Message('Nuevo mensaje de contacto',
                       sender=app.config['MAIL_USERNAME'],
-                      recipients=['titodoublep057@gmail.com'])  # Cambiar destinatario aquí
+                      recipients=[app.config['MAIL_USERNAME']])
         msg.body = f"Nombre: {nombre}\nCorreo: {correo}\nMensaje: {mensaje}"
 
         # Enviar el mensaje
@@ -68,7 +68,6 @@ def send_email():
 
     return render_template('index.html')
 
-if "_name_" == "_main_":
+if __name__ == "__main__":
     app.run(debug=True)
-
     

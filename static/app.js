@@ -21,21 +21,28 @@ function toggleDropdown() {
 /*Código para hacer funcionar el formulario */
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault(); 
 
-    // Simulate form submission and response
-    const nombre = document.querySelector('input[name="nombre"]').value;
-    const correo = document.querySelector('input[name="correo"]').value;
-    const mensaje = document.querySelector('textarea[name="mensaje"]').value;
+    const submitButton = this.querySelector('button[type="submit"]'); 
+    submitButton.classList.add('loading'); 
 
-    if (nombre && correo && mensaje) {
-        // Simulate a successful submission
-        showFlashMessage('Mensaje enviado correctamente', 'success');
-        this.reset(); // Reset the form fields
-    } else {
-        // Simulate an error (e.g., invalid email)
-        showFlashMessage('Correo electrónico no existente', 'danger');
-    }
+    const formData = new FormData(this);
+
+    fetch('/send_email', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        showFlashMessage('Mensaje enviado correctamente.', 'success');
+        this.reset(); // Limpia el formulario
+        submitButton.classList.remove('loading');
+    })
+    .catch(error => {
+        showFlashMessage('Hubo un error al enviar el mensaje.', 'danger');
+        console.error('Error:', error);
+        submitButton.classList.remove('loading'); 
+    });
 });
 
 function showFlashMessage(message, category) {
