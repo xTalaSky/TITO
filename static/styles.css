@@ -17,23 +17,23 @@ body {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #bdbdbd; /* Match the navbar background color */
-    color: rgb(255, 255, 255); /* Text color to match the navbar */
-    outline: none; /* Remove default outline */
-    width: 100%; /* Ensure full width on smaller screens */
-    max-width: 300px; /* Optional: limit the maximum width */
+    background-color: #bdbdbd; 
+    color: rgb(255, 255, 255); 
+    outline: none; 
+    width: 100%; 
+    max-width: 300px; 
 }
 
 .search-bar input::placeholder {
-    color: rgba(255, 255, 255, 0.7); /* Placeholder color */
+    color: rgba(255, 255, 255, 0.7); 
 }
 
 /* Media query for mobile devices */
 @media (max-width: 600px) {
     .search-bar input {
-        font-size: 14px; /* Adjust font size for smaller screens */
-        padding: 8px; /* Adjust padding for smaller screens */
-        max-width: 100%; /* Use full width on mobile */
+        font-size: 14px; 
+        padding: 8px; 
+        max-width: 100%;  
     }
 }
 
