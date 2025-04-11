@@ -499,38 +499,23 @@ swiper-slide img {
     gap: 10px; 
 }
 
-
-@media (max-width: 768px) {
+@media (max-width: 768px){
     .about-section {
         flex-direction: row; 
         align-items: center;
-        padding: 10px; 
+        padding: 0px; 
     }
 
     .social-images {
         flex-direction: row; 
-        justify-content: center;
-        
-    }
-
-    .social-images img {
-        margin: 5px; 
-        width: 60px; 
-        height: 160px;
-    }
-
-    .about-section .right .images {
-        flex-direction: row; 
-        justify-content: center;
-        
+        justify-content: center;  
     }
 
     .about-section img {
-        width: 30%; 
-        height: auto;
-    }
+        width:53px; 
+        height:53px;
+        }
 }
-
 
 /* Diseño responsivo */
 @media (max-width: 768px) {
